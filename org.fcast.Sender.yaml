@@ -1,6 +1,6 @@
 app-id: org.fcast.Sender
 runtime: org.freedesktop.Platform
-runtime-version: "25.08"
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -40,8 +40,8 @@ modules:
       - -Dprotobuf_BUILD_TESTS=OFF
     sources:
       - type: archive
-        url: https://github.com/protocolbuffers/protobuf/releases/download/v33.1/protobuf-33.1.tar.gz
-        sha256: fda132cb0c86400381c0af1fe98bd0f775cb566cb247cdcc105e344e00acc30e
+        url: https://github.com/protocolbuffers/protobuf/releases/download/v33.5/protobuf-33.5.tar.gz
+        sha256: c6c7c27fadc19d40ab2eaa23ff35debfe01f6494a8345559b9bb285ce4144dd1
         x-checker-data:
           type: anitya
           project-id: 3715
