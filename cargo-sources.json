@@ -8,8 +8,8 @@
     {
         "type": "git",
         "url": "https://github.com/malba124/gst-plugins-rs",
-        "commit": "e36ce7642fe936ee082fa9ea9b04c3d8ef2c851d",
-        "dest": "flatpak-cargo/git/gst-plugins-rs-e36ce76"
+        "commit": "ed20fcd7a6794003f7fb52febcefda6965221d7e",
+        "dest": "flatpak-cargo/git/gst-plugins-rs-ed20fcd"
     },
     {
         "type": "archive",
@@ -3781,12 +3781,12 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/gst-plugins-rs-e36ce76/net/reqwest\" \"cargo/vendor/gst-plugin-reqwest\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/gst-plugins-rs-ed20fcd/net/reqwest\" \"cargo/vendor/gst-plugin-reqwest\""
         ]
     },
     {
         "type": "inline",
-        "contents": "[package]\nname = \"gst-plugin-reqwest\"\nversion = \"0.14.4\"\nauthors = [\"Sebastian Dr\u00f6ge <sebastian@centricular.com>\"]\nrepository = \"https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs\"\nlicense = \"MIT OR Apache-2.0\"\ndescription = \"GStreamer reqwest HTTP Source Plugin\"\nedition = \"2021\"\nrust-version = \"1.83\"\n\n[package.metadata.capi]\nmin_version = \"0.9.21\"\n\n[package.metadata.capi.header]\nenabled = false\n\n[package.metadata.capi.library]\ninstall_subdir = \"gstreamer-1.0\"\nversioning = false\nimport_library = false\n\n[package.metadata.capi.pkg_config]\nrequires_private = \"gstreamer-1.0, gstreamer-base-1.0, gobject-2.0, glib-2.0, gmodule-2.0\"\n\n[package.metadata.gstreamer]\nrelease_date = \"2025-07-16\"\n\n[dependencies]\nurl = \"2.1\"\nfutures = \"0.3\"\nheaders = \"0.4\"\nmime = \"0.3\"\n\n[dependencies.gst]\npackage = \"gstreamer\"\nversion = \"0.24\"\n\n[dependencies.gst-base]\npackage = \"gstreamer-base\"\nversion = \"0.24\"\n\n[dependencies.tokio]\nversion = \"1.0\"\ndefault-features = false\nfeatures = [\"time\", \"rt-multi-thread\"]\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.rustls]\nversion = \"0.23\"\ndefault-features = false\nfeatures = [\"prefer-post-quantum\", \"tls12\", \"std\", \"ring\"]\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.reqwest]\nversion = \"0.13\"\ndefault-features = false\nfeatures = [\"charset\", \"http2\", \"system-proxy\", \"cookies\", \"gzip\", \"default-tls\"]\n\n[target.\"cfg(target_os = \\\"android\\\")\".dependencies.reqwest]\nversion = \"0.13\"\ndefault-features = false\nfeatures = [\"native-tls\", \"charset\", \"http2\", \"system-proxy\", \"cookies\", \"gzip\"]\n\n[target.\"cfg(any(target_os = \\\"macos\\\", target_os = \\\"windows\\\"))\".dependencies.reqwest]\nversion = \"0.13\"\nfeatures = [\"native-tls\", \"cookies\", \"gzip\"]\n\n[dev-dependencies]\nhttp-body-util = \"0.1.1\"\nbytes = \"1.0\"\npin-project-lite = \"0.2\"\n\n[dev-dependencies.hyper]\nversion = \"1.0\"\nfeatures = [\"server\"]\n\n[dev-dependencies.gst]\npackage = \"gstreamer\"\nversion = \"0.24\"\n\n[lib]\nname = \"gstreqwest\"\ncrate-type = [\"cdylib\", \"rlib\"]\npath = \"src/lib.rs\"\n\n[build-dependencies.gst-plugin-version-helper]\npath = \"./version-helper\"\nversion = \"0.8\"\n\n[features]\nstatic = []\ncapi = []\ndoc = [\"gst/v1_18\"]\n",
+        "contents": "[package]\nname = \"gst-plugin-reqwest\"\nversion = \"0.14.4\"\nauthors = [\"Sebastian Dr\u00f6ge <sebastian@centricular.com>\"]\nrepository = \"https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs\"\nlicense = \"MIT OR Apache-2.0\"\ndescription = \"GStreamer reqwest HTTP Source Plugin\"\nedition = \"2021\"\nrust-version = \"1.83\"\n\n[package.metadata.capi]\nmin_version = \"0.9.21\"\n\n[package.metadata.capi.header]\nenabled = false\n\n[package.metadata.capi.library]\ninstall_subdir = \"gstreamer-1.0\"\nversioning = false\nimport_library = false\n\n[package.metadata.capi.pkg_config]\nrequires_private = \"gstreamer-1.0, gstreamer-base-1.0, gobject-2.0, glib-2.0, gmodule-2.0\"\n\n[package.metadata.gstreamer]\nrelease_date = \"2025-07-16\"\n\n[dependencies]\nurl = \"2.1\"\nfutures = \"0.3\"\nheaders = \"0.4\"\nmime = \"0.3\"\n\n[dependencies.gst]\npackage = \"gstreamer\"\nversion = \"0.24\"\n\n[dependencies.gst-base]\npackage = \"gstreamer-base\"\nversion = \"0.24\"\n\n[dependencies.tokio]\nversion = \"1.0\"\ndefault-features = false\nfeatures = [\"time\", \"rt-multi-thread\"]\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.rustls]\nversion = \"0.23\"\ndefault-features = false\nfeatures = [\"prefer-post-quantum\", \"tls12\", \"std\", \"ring\"]\n\n[target.\"cfg(target_os = \\\"linux\\\")\".dependencies.reqwest]\nversion = \"0.13\"\ndefault-features = false\nfeatures = [\"charset\", \"http2\", \"system-proxy\", \"cookies\", \"gzip\", \"default-tls\"]\n\n[target.\"cfg(target_os = \\\"android\\\")\".dependencies.reqwest]\nversion = \"0.13\"\ndefault-features = false\nfeatures = [\"native-tls\", \"charset\", \"http2\", \"system-proxy\", \"cookies\", \"gzip\"]\n\n[target.\"cfg(any(target_os = \\\"macos\\\", target_os = \\\"windows\\\"))\".dependencies.reqwest]\nversion = \"0.13\"\nfeatures = [\"native-tls\", \"cookies\", \"gzip\"]\n\n[dev-dependencies]\nhttp-body-util = \"0.1.1\"\nbytes = \"1.0\"\npin-project-lite = \"0.2\"\n\n[dev-dependencies.hyper]\nversion = \"1.0\"\nfeatures = [\"server\"]\n\n[dev-dependencies.gst]\npackage = \"gstreamer\"\nversion = \"0.24\"\n\n[lib]\nname = \"gstreqwest\"\ncrate-type = [\"cdylib\", \"rlib\"]\npath = \"src/lib.rs\"\n\n[build-dependencies.gst-plugin-version-helper]\nversion = \"0.8\"\n\n[features]\nstatic = []\ncapi = []\ndoc = [\"gst/v1_18\"]\n",
         "dest": "cargo/vendor/gst-plugin-reqwest",
         "dest-filename": "Cargo.toml"
     },
@@ -3820,24 +3820,6 @@
         "type": "inline",
         "contents": "{\"package\": \"a68a894ef2d738054b950e1dbef5d9012b63fd968d4d32dbccd31bd8d8d4b219\", \"files\": {}}",
         "dest": "cargo/vendor/gst-plugin-version-helper-0.8.3",
-        "dest-filename": ".cargo-checksum.json"
-    },
-    {
-        "type": "shell",
-        "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/gst-plugins-rs-e36ce76/version-helper\" \"cargo/vendor/gst-plugin-version-helper\""
-        ]
-    },
-    {
-        "type": "inline",
-        "contents": "[package]\nname = \"gst-plugin-version-helper\"\nversion = \"0.8.3\"\nauthors = [\"Sajeer Ahamed <ahamedsajeer.15.15@cse.mrt.ac.lk>\", \"Sebastian Dr\u00f6ge <sebastian@centricular.com>\"]\ncategories = [\"development-tools\"]\ndescription = \"build.rs helper function for GStreamer plugin metadata\"\nrepository = \"https://gitlab.freedesktop.org/gstreamer/gst-plugins-rs\"\nlicense = \"MIT\"\nhomepage = \"https://gstreamer.freedesktop.org\"\nkeywords = [\"gstreamer\", \"multimedia\", \"cargo\"]\nedition = \"2021\"\nrust-version = \"1.69\"\n\n[package.metadata.gstreamer]\nrelease_date = \"2025-07-16\"\n\n[dependencies.chrono]\nversion = \"0.4.23\"\ndefault-features = false\nfeatures = [\"std\", \"clock\"]\n\n[dependencies.toml_edit]\nversion = \"0.24\"\ndefault-features = false\nfeatures = [\"parse\"]\n",
-        "dest": "cargo/vendor/gst-plugin-version-helper",
-        "dest-filename": "Cargo.toml"
-    },
-    {
-        "type": "inline",
-        "contents": "{\"package\": null, \"files\": {}}",
-        "dest": "cargo/vendor/gst-plugin-version-helper",
         "dest-filename": ".cargo-checksum.json"
     },
     {
@@ -12702,7 +12684,7 @@
     },
     {
         "type": "inline",
-        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://gitlab.futo.org/videostreaming/fcast-slint\"]\ngit = \"https://gitlab.futo.org/videostreaming/fcast-slint\"\nreplace-with = \"vendored-sources\"\nrev = \"f976d8c7958bddbba14a9f4632b8d3302cea96f6\"\n\n[source.\"https://github.com/malba124/gst-plugins-rs\"]\ngit = \"https://github.com/malba124/gst-plugins-rs\"\nreplace-with = \"vendored-sources\"\nrev = \"e36ce7642fe936ee082fa9ea9b04c3d8ef2c851d\"\n",
+        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://gitlab.futo.org/videostreaming/fcast-slint\"]\ngit = \"https://gitlab.futo.org/videostreaming/fcast-slint\"\nreplace-with = \"vendored-sources\"\nrev = \"f976d8c7958bddbba14a9f4632b8d3302cea96f6\"\n\n[source.\"https://github.com/malba124/gst-plugins-rs\"]\ngit = \"https://github.com/malba124/gst-plugins-rs\"\nreplace-with = \"vendored-sources\"\nrev = \"ed20fcd7a6794003f7fb52febcefda6965221d7e\"\n",
         "dest": "cargo",
         "dest-filename": "config"
     }
